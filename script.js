@@ -29,6 +29,16 @@ if (enquiryForm) {
     const originalLabel = submitButton.textContent;
     const formData = new FormData(enquiryForm);
     const payload = Object.fromEntries(formData.entries());
+    const submittedAt = new Date();
+    const reference = `EBL-${submittedAt.getTime().toString(36).toUpperCase()}`;
+    const customerName = String(payload.name || "New enquiry")
+      .replace(/[\r\n]+/g, " ")
+      .trim()
+      .slice(0, 60);
+
+    payload._subject = `Book a Call | ${customerName} | ${reference}`;
+    payload.submission_reference = reference;
+    payload.submitted_at = submittedAt.toISOString();
 
     submitButton.disabled = true;
     submitButton.textContent = "Sending...";
