@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | EmbedLancer</title>
+  <meta name="description" content="Contact EmbedLancer to discuss embedded firmware, hardware, IoT, PCB, engineering tool and product development requirements.">
+  <meta name="theme-color" content="#05070c">
+  <link rel="canonical" href="https://embedlancer.github.io/contact.html">
+  <link rel="icon" href="assets/logos/embedlancer-logo-light.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" data-header>
+    <a class="brand" href="index.html" aria-label="EmbedLancer home">
+      <img src="assets/logos/embedlancer-logo-light.png" alt="EmbedLancer">
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links" data-nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Portfolio</a>
+      <a href="industries.html">Industries</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a class="active" href="contact.html">Contact</a>
+      <a class="nav-cta" href="#book-call">Book a Call</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Contact</p>
+      <h1>Bring the product requirement, technical challenge or development gap.</h1>
+      <p>Share the current stage and expected outcome. EmbedLancer will respond with the right next engineering step.</p>
+    </section>
+
+    <section class="section contact-intro">
+      <article>
+        <span>Email</span>
+        <h2>Project and business enquiries</h2>
+        <a href="mailto:contact.embedlancer@gmail.com">contact.embedlancer@gmail.com</a>
+      </article>
+      <article>
+        <span>Project Scope</span>
+        <h2>Embedded product development</h2>
+        <p>Firmware, PCB support, IoT, engineering tools, validation and production handover.</p>
+      </article>
+      <article>
+        <span>Starting Point</span>
+        <h2>Any stage is welcome</h2>
+        <p>Idea, prototype, existing board, firmware update, release preparation or production support.</p>
+      </article>
+    </section>
+
+    <section class="section enquiry-section" id="book-call">
+      <form
+        class="enquiry-form"
+        action="https://formsubmit.co/ajax/contact.embedlancer@gmail.com"
+        method="POST"
+        data-enquiry-form
+      >
+        <input type="hidden" name="_subject" value="New EmbedLancer Book a Call Request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_url" value="https://embedlancer.github.io/contact.html">
+        <input class="form-trap" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-heading">
+          <p class="eyebrow">Book a Call</p>
+          <h2>Request an engineering discussion.</h2>
+          <p>Provide the project context and preferred schedule. The request will be sent directly to EmbedLancer.</p>
+        </div>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="form-row">
+          <label for="company">Company or Organization</label>
+          <input id="company" name="company" type="text" autocomplete="organization">
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone or WhatsApp</label>
+          <input id="phone" name="mobile_or_whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="Include country code" required>
+        </div>
+        <div class="form-row">
+          <label for="stage">Current Stage</label>
+          <select id="stage" name="current_stage" required>
+            <option value="">Select current stage</option>
+            <option>Idea or requirement</option>
+            <option>Prototype in progress</option>
+            <option>Hardware ready</option>
+            <option>Firmware update required</option>
+            <option>Ready for release</option>
+            <option>Production support required</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="service">Project Type</label>
+          <select id="service" name="service" required>
+            <option value="">Select project type</option>
+            <option>Embedded Firmware</option>
+            <option>Hardware and PCB</option>
+            <option>IoT Product</option>
+            <option>Desktop or Production Tool</option>
+            <option>Testing and Validation</option>
+            <option>Documentation and Handover</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="preferred-date">Preferred Date</label>
+          <input id="preferred-date" name="preferredDate" type="date">
+        </div>
+        <div class="form-row">
+          <label for="preferred-time">Preferred Time</label>
+          <input id="preferred-time" name="preferredTime" type="time">
+        </div>
+        <div class="form-row full">
+          <label for="message">Project Requirement</label>
+          <textarea id="message" name="message" rows="8" required></textarea>
+        </div>
+        <button class="button primary full-button" type="submit" data-submit-button>Request a Call</button>
+        <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+      </form>
+
+      <aside class="contact-card">
+        <img src="assets/logos/embedlancer-logo-light.png" alt="EmbedLancer">
+        <div>
+          <span>Direct Email</span>
+          <a href="mailto:contact.embedlancer@gmail.com">contact.embedlancer@gmail.com</a>
+        </div>
+        <div>
+          <span>Useful Details</span>
+          <p>Controller, board status, communication interfaces, I/O list, production quantity, target schedule and required delivery files.</p>
+        </div>
+        <div>
+          <span>Engineering Focus</span>
+          <p>Practical development, clear interfaces, validation evidence and maintainable release packages.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <img src="assets/logos/embedlancer-logo-light.png" alt="EmbedLancer">
+      <p>Embedded hardware, firmware, IoT and tool development.</p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="projects.html">Portfolio</a>
+      <a href="industries.html">Industries</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/Embedlancer" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+    <span>Copyright 2026 EmbedLancer. All rights reserved.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
