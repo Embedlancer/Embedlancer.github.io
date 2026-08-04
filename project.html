@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | EmbedLancer</title>
-  <meta name="description" content="Explore embedded firmware, hardware, HMI, IoT and engineering software projects developed by EmbedLancer.">
+  <title>Project | EmbedLancer</title>
+  <meta name="description" content="Embedded product development project by EmbedLancer.">
   <meta name="theme-color" content="#0b0d10">
-  <link rel="canonical" href="https://embedlancer.github.io/projects.html">
+  <meta name="robots" content="index,follow">
   <link rel="icon" href="assets/logos/embedlancer-logo-light.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header" data-header>
+  <header class="site-header site-header-overlay" data-header>
     <a class="brand" href="index.html" aria-label="EmbedLancer home"><img src="assets/logos/embedlancer-logo-light.png" alt="EmbedLancer"></a>
     <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button>
     <nav class="nav-links" data-nav>
@@ -22,27 +22,8 @@
     </nav>
   </header>
 
-  <main>
-    <section class="portfolio-hero">
-      <p class="eyebrow eyebrow-light">Selected engineering work</p>
-      <h1>Products, systems and tools built beyond the prototype.</h1>
-      <p>Explore development work across healthcare, industrial control, connected devices and production engineering.</p>
-    </section>
-
-    <section class="portfolio-index">
-      <div class="portfolio-index-heading">
-        <span>Project index</span>
-        <p>Each project combines disciplines around a practical operating requirement.</p>
-      </div>
-      <div class="portfolio-grid" data-project-grid aria-live="polite">
-        <p class="content-loading">Loading projects...</p>
-      </div>
-    </section>
-
-    <section class="project-cta">
-      <div><p class="eyebrow">Have a similar requirement?</p><h2>Share the product stage and the result your team needs.</h2></div>
-      <a class="button primary" href="contact.html#book-call">Discuss your project</a>
-    </section>
+  <main data-project-detail>
+    <section class="project-detail-loading"><p>Loading project...</p></section>
   </main>
 
   <footer class="site-footer editorial-footer">

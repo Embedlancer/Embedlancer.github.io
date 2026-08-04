@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "id": "optimus-patient-alert-system",
+      "title": "Optimus Patient Alert System",
+      "category": "Healthcare IoT",
+      "year": "2026",
+      "status": "Production development",
+      "featured": true,
+      "coverImage": "assets/projects/optimus/patient-alert-system-overview.jpeg",
+      "shortDescription": "A wireless patient-to-care-team alert ecosystem connecting a bedside remote, room-side device, master receiver and service tooling.",
+      "description": "The system brings bedside alert initiation, local room indication, wireless event transfer and master-side notification into one coordinated product workflow. Development assets are organized across firmware, hardware, provisioning and client-ready release documentation.",
+      "services": [
+        "Embedded firmware",
+        "Wireless communication",
+        "Device provisioning",
+        "Release engineering"
+      ],
+      "challenge": "Create a dependable alert path across multiple device roles while keeping setup, service and release handling practical for deployment teams.",
+      "solution": "Structure the product as a coordinated remote, room-side and master-unit ecosystem, supported by controlled firmware packages and a dedicated provisioning workflow.",
+      "outcome": "A documented multi-device development package with product imagery, firmware releases, hardware assets, service tooling and handover material.",
+      "gallery": [
+        {
+          "image": "assets/projects/optimus/remote-unit.jpeg",
+          "caption": "Bedside remote unit"
+        },
+        {
+          "image": "assets/projects/optimus/master-unit.jpeg",
+          "caption": "Master receiver unit"
+        },
+        {
+          "image": "assets/projects/optimus/master-kit.jpeg",
+          "caption": "Master unit deployment kit"
+        }
+      ]
+    },
+    {
+      "id": "temperature-humidity-controller",
+      "title": "Temperature & Humidity Controller",
+      "category": "Industrial Control",
+      "year": "2026",
+      "status": "Prototype validation",
+      "featured": true,
+      "coverImage": "assets/projects/temperature-controller/temperature-controller-device.jpeg",
+      "shortDescription": "An ESP32-based environmental controller combining temperature, humidity and dual-timer workflows through a DWIN touch interface.",
+      "description": "The controller combines environmental measurement, configurable set points, automatic operating modes and timed outputs in an enclosure-ready touch interface. Firmware, HMI and hardware references are maintained as separate but coordinated engineering packages.",
+      "services": [
+        "ESP32 firmware",
+        "DWIN HMI",
+        "Sensor integration",
+        "Control logic"
+      ],
+      "challenge": "Present multiple control functions clearly on one operator interface while keeping sensor, timing and display communication logic maintainable.",
+      "solution": "Separate the firmware into focused modules for analog measurement, RTC, RS485, timers and HMI communication, then connect them through a structured application layer.",
+      "outcome": "A working controller prototype with an operator-focused display, modular firmware structure, hardware schematic reference and organized project documentation.",
+      "gallery": [
+        {
+          "image": "assets/projects/temperature-controller/temperature-controller-device.jpeg",
+          "caption": "Controller enclosure and DWIN operator interface"
+        }
+      ]
+    }
+  ]
+}

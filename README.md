@@ -1,17 +1,29 @@
 # EmbedLancer Website
 
-Professional static website for EmbedLancer, an embedded solutions studio for hardware, firmware, IoT, PCB support, engineering tools and production-ready handover assets.
+Official company website for EmbedLancer, an embedded product development studio for hardware, firmware, IoT, PCB support, engineering software and production-ready handover packages.
 
 ## Pages
 
 - `index.html` - Home page
 - `services.html` - Service details
-- `projects.html` - Portfolio and device photos
+- `projects.html` - CMS-managed project portfolio
+- `project.html` - Dynamic project case-study view
 - `industries.html` - Industries and application domains
 - `case-studies.html` - Detailed project case studies
 - `contact.html` - Contact and Book a Call request form
 - `process.html` - Development process and delivery outputs
 - `enquiry.html` - Compatibility redirect to the Contact page
+- `admin/` - Authorized project content management
+
+## Project Content
+
+Portfolio content is maintained in `content/projects.json`. The website uses this source to build the home-page featured work, portfolio index and individual project case studies.
+
+Authorized editors can manage project text and photographs from:
+
+**Admin:** https://embedlancer.github.io/admin/
+
+The admin uses GitHub repository permissions. Access tokens remain in the editor's browser and are never stored in the website source.
 
 ## Assets
 
@@ -33,6 +45,13 @@ assets/
       master-kit.jpeg
     temperature-controller/
       temperature-controller-device.jpeg
+  uploads/
+    CMS-managed project photographs
+content/
+  projects.json
+admin/
+  index.html
+  config.yml
 ```
 
 ## Hosting
@@ -47,4 +66,4 @@ The public company website is deployed through GitHub Pages from the root of the
 **Tagline:** Think. Build. Evolve.  
 **Contact:** contact.embedlancer@gmail.com
 
-@copyright : EmbedLancer. All rights reserved.
+Copyright 2026 EmbedLancer. All rights reserved.

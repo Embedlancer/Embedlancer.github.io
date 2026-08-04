@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+backend:
+  name: github
+  repo: Embedlancer/Embedlancer.github.io
+  branch: main
+  auth_methods: [token]
+
+site_url: https://embedlancer.github.io
+display_url: https://embedlancer.github.io
+logo_url: https://embedlancer.github.io/assets/logos/embedlancer-logo-light.png
+publish_mode: simple
+
+media_folder: assets/uploads
+public_folder: assets/uploads
+
+collections:
+  - name: website_content
+    label: Website Content
+    files:
+      - name: projects
+        label: Projects
+        file: content/projects.json
+        format: json
+        fields:
+          - label: Projects
+            name: projects
+            widget: list
+            add_to_top: true
+            summary: "{{fields.title}} - {{fields.category}}"
+            fields:
+              - { label: Project ID, name: id, widget: string, hint: "Lowercase project name with hyphens, for example smart-energy-meter" }
+              - { label: Project Title, name: title, widget: string }
+              - { label: Category, name: category, widget: string, hint: "For example Healthcare IoT or Industrial Control" }
+              - { label: Year, name: year, widget: string, default: "2026" }
+              - { label: Project Status, name: status, widget: string, default: "Development complete" }
+              - { label: Show on Home Page, name: featured, widget: boolean, default: false }
+              - { label: Cover Image, name: coverImage, widget: image, choose_url: false }
+              - { label: Short Description, name: shortDescription, widget: text, hint: "Shown on project cards and search descriptions" }
+              - { label: Full Project Description, name: description, widget: text }
+              - label: Services and Technologies
+                name: services
+                widget: list
+                field: { label: Service, name: service, widget: string }
+              - { label: Challenge, name: challenge, widget: text }
+              - { label: Engineering Response, name: solution, widget: text }
+              - { label: Outcome, name: outcome, widget: text }
+              - label: Project Gallery
+                name: gallery
+                widget: list
+                required: false
+                summary: "{{fields.caption}}"
+                fields:
+                  - { label: Image, name: image, widget: image, choose_url: false }
+                  - { label: Caption, name: caption, widget: string }

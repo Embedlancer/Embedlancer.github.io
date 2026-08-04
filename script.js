@@ -1,19 +1,41 @@
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
+const siteHeader = document.querySelector("[data-header]");
 const enquiryForm = document.querySelector("[data-enquiry-form]");
 
 if (navToggle && nav) {
+  const closeNavigation = () => {
+    nav.classList.remove("is-open");
+    siteHeader?.classList.remove("is-menu-open");
+    document.body.classList.remove("nav-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  };
+
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("is-open");
+    siteHeader?.classList.toggle("is-menu-open", isOpen);
+    document.body.classList.toggle("nav-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
   nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-    });
+    link.addEventListener("click", closeNavigation);
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeNavigation();
+    }
+  });
+}
+
+if (siteHeader) {
+  const updateHeader = () => {
+    siteHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+  };
+
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
 }
 
 if (enquiryForm) {
